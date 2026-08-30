@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Runs</h1>
+
+    <table>
+      <tr><th>Date</th><th>Distance</th><th>Time</th><th>Pace</th></tr>
+      <% runs.forEach(run => { %>
+        <tr>
+          <td><%= run.date %></td>
+          <td><%= run.distanceKm %> km</td>
+          <td><%= formatDuration(run.durationSec) %></td>
+          <td><%= formatPace(run.distanceKm, run.durationSec) %></td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
